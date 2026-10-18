@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+:root {
+  --fundo: #fdfbf7;
+  --detalhes: #2c1810;
+  --texto: #3e2723;
+  --cor-btn: #d4a373;
+}
+
+/* 1. CORRIGIDO: de '-' para '*' */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- HEADER --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  max-width: 1200px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: var(--detalhes);
+}
+
+nav > ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav > ul a {
+  color: var(--detalhes);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav > ul a:hover {
+  color: var(--cor-btn);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  & h2 {
+    font-size: 2.2rem;
+    color: var(--detalhes);
+  }
+
+  & p {
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+
+  /* Estilizando o botão principal */
+  & .btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--detalhes);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  & .btn-primary:hover {
+    background-color: var(--cor-btn);
+    transform: translateY(-2px);
+  }
+}
+
+/* --- DIFERENCIAIS (GRID) --- */
+.diferenciais {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+
+  & h2 {
+    margin-bottom: 1.5rem;
+    color: var(--detalhes);
+  }
+}
+
+/* Layout em 3 colunas para os cards */
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-diferencial {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  transition: all 0.2s ease-in-out;
+
+  & h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--detalhes);
+  }
+
+  /* 2. CORRIGIDO: espaço entre & e p */
+  & p {
+    font-weight: 500;
+  }
+}
+
+.card-diferencial:hover {
+  transform: translateY(-5px); /* Subida suave no hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* --- PRODUTOS (GRID) --- */
+.produtos {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+
+  & h2 {
+    margin-bottom: 1.5rem;
+    color: var(--detalhes);
+  }
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-produto {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+
+  & .preco {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--detalhes);
+  }
+}
+
+.btn-comprar {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--cor-btn);
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-comprar:hover {
+  background-color: var(--detalhes);
+  transform: translateY(-2px);
+}
+
+/* --- SOBRE NÓS --- */
+.sobre {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+
+  & h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+    color: var(--detalhes);
+  }
+}
+
+/* --- FOOTER --- */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  background-color: var(--detalhes);
+  color: #ffffff;
+
+  & .social-links {
+    margin-bottom: 1rem;
+  }
+
+  & a {
+    text-decoration: none;
+    color: var(--cor-btn);
+    margin: 0 0.8rem;
+    font-weight: 500;
+  }
+
+  & p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}
