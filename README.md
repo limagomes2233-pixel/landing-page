@@ -1,2 +1,2 @@
 # landing-page
-landing page responsiva cm HTML, CSS e js nativo
+Landing page responsiva desenvolvida com HTML semântico e CSS (Grid, Flexbox, variáveis CSS e media queries), com cabeçalho de navegação, seção de destaque, cards de diferenciais e produtos e rodapé. O layout se adapta de telas de celular a desktop.
